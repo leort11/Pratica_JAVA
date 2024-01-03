@@ -17,7 +17,8 @@ public class ClienteFerrando {
                     teclado = scanner.nextLine();
 
                     if(teclado.toUpperCase().equals("FIM")) {
-                    saida.println(teclado.toUpperCase());
+                        saida.println(teclado.toUpperCase());
+                        break;
 
                     }
                     
@@ -27,6 +28,8 @@ public class ClienteFerrando {
                     resposta = entrada.readLine();
                     System.out.println("Servidor: " + resposta);
                 }
+
+                scanner.close();
 
             } catch(Exception e) {
                 System.out.println(e.getMessage());
