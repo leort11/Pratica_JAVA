@@ -1,30 +1,30 @@
 package ListaEncadeada;
 
-public class No {
-    private String value;
-    private No next;
+public class No<T> {
+    private T value;
+    private No<T> next;
 
 
     // CONSTRUCTOR:
-    public No(String newValue) {
+    public No(T newValue) {
         this.value = newValue;
     }
 
     
     // GETTERS and SETTERS:
-    public String getValue() {
+    public T getValue() {
         return this.value;
     }
 
-    public void setValue(String value) {
+    public void setValue(T value) {
         this.value = value;
     }
 
-    public No getNext() {
+    public No<T> getNext() {
         return this.next;
     }
 
-    public void setNext(No next) {
+    public void setNext(No<T> next) {
         this.next = next;
     }
 }

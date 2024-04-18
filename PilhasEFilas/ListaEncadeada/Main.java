@@ -2,7 +2,7 @@ package ListaEncadeada;
 
 public class Main {
     public static void main(String[] args) {
-        ListaEncadeada list = new ListaEncadeada();
+        ListaEncadeada<String> list = new ListaEncadeada<String>();
         System.out.println(list.getSize());
 
         list.add("AC");

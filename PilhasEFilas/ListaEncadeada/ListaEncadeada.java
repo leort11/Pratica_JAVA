@@ -1,8 +1,8 @@
 package ListaEncadeada;
 
-public class ListaEncadeada {
-    private No last;
-    private No first;
+public class ListaEncadeada<T> {
+    private No<T> last;
+    private No<T> first;
     private int size;
 
     // CONSTRUCTOR:
@@ -13,16 +13,16 @@ public class ListaEncadeada {
 
 
     // GETTERS and SETTERS:
-    public No getLast() {
+    public No<T> getLast() {
         return last;
     }
-    public void setLast(No last) {
+    public void setLast(No<T> last) {
         this.last = last;
     }
-    public No getFirst() {
+    public No<T> getFirst() {
         return first;
     }
-    public void setFirst(No first) {
+    public void setFirst(No<T> first) {
         this.first = first;
     }
     public int getSize() {
@@ -34,8 +34,8 @@ public class ListaEncadeada {
 
 
     // FUNCTIONS:
-    public void add(String newValue) {
-        No newNo = new No(newValue);
+    public void add(T newValue) {
+        No<T> newNo = new No<T>(newValue);
 
         // if it is the only value:
         if(this.first == null && this.last == null) {
@@ -50,12 +50,12 @@ public class ListaEncadeada {
         this.size++;
     }
 
-    public void remove(String removeValue) {
-        No before = null;
-        No actual = this.first;
+    public void remove(T removeValue) {
+        No<T> before = null;
+        No<T> actual = this.first;
 
         for(int i = 0; i < this.getSize(); i++) {
-            if(actual.getValue().equalsIgnoreCase(removeValue)){
+            if(actual.getValue().equals(removeValue)){
                 if(actual == first && actual == last) {
                     this.first = null;
                     this.last = null;
@@ -83,8 +83,8 @@ public class ListaEncadeada {
         }
     }
 
-    public No get(int position) {
-        No actual = this.first;
+    public No<T> get(int position) {
+        No<T> actual = this.first;
 
         for(int i = 0; i < position; i++) {
             if(actual.getNext() != null){
