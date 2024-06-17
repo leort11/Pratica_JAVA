@@ -1,14 +1,14 @@
-package Fila;
+package Pilha;
 
-public class Fila <T>{
+public class Pilha<T> {
     private ListaEncadeada<T> lista;
 
-    public Fila() {
+    public Pilha() {
         this.lista = new ListaEncadeada<T>();
     }
 
-    public void adicionar(T novoValor) {
-        this.lista.add(novoValor);
+    public void adicionar(T valor) {
+        this.lista.addFirst(valor);
     }
 
     public void remover() {

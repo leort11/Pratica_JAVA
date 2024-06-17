@@ -1,4 +1,4 @@
-package ListaEncadeada;
+package Fila;
 
 public class ListaEncadeada<T> {
     private No<T> last;

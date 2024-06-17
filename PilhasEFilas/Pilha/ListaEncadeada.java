@@ -1,4 +1,4 @@
-package ListaEncadeada;
+package Pilha;
 
 public class ListaEncadeada<T> {
     private No<T> last;
@@ -82,6 +82,21 @@ public class ListaEncadeada<T> {
             actual = actual.getNext();
         }
     }
+
+    public void addFirst(T newFisrtValue) {
+        No<T> newNo = new No<T>(newFisrtValue);
+
+        if (this.first == null && this.last == null) {
+            this.first = newNo;
+            this.last = newNo;
+        } else {
+            newNo.setNext(this.first);
+            this.first = newNo;
+        }
+
+        this.size++;
+    }
+
 
     public No<T> get(int position) {
         No<T> actual = this.first;

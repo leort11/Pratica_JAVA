@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "ListaEncadeada2.Main",
+            "projectName": "PilhasEFilas_46f1a90"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Pilha.Main",
+            "projectName": "PilhasEFilas_46f1a90"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Fila.Main",
+            "projectName": "PilhasEFilas_46f1a90"
+        },
+        {
+            "type": "java",
             "name": "MainNum",
             "request": "launch",
             "mainClass": "ListaEncadeada.MainNum",
